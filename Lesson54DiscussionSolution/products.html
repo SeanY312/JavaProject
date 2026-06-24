@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- import the script.js file -->
+    <!-- We need to import JQUERY Library to make the api call-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="products.js"></script>
+
+  </head>
+  
+  <!-- Call the int function when website loads -->
+  <body onload="init()">
+    <div>
+      <!--  Header or Banner -->
+      <div id="header">
+        <h1> Lesson 54 - Chinook Customers </h1>
+      </div>
+      <!--  nav bar -->
+      <nav id='nav'>
+        <h2>Navigation</h2>
+        <a href="index.html" class="button">Customers</a>   
+        <a href="employees.html" class="button">Employees</a>
+        <a href="products.html" class="button">Products</a>
+        <a href="orders.html" class="button">Orders</a>
+      </nav>
+      
+      <div class="container">
+  
+        <div class='panel'>
+          <div class="container filter">
+            <div> Left Panel
+              <h4> Search for product by type</h4>
+              <!-- <input style="flex:2;text-align:right;" type="text" id="country" placeholder="Enter country" >         -->
+              <select name="items" id="items">
+                <option value="Office">Office</option>
+                <option value="Food">Food</option>
+                <option value="Summer">Summer</option>
+                <option value="Gardening">Gardening</option>
+                <option value="Sports">Sports</option>
+              </select>
+              <a class="button" onclick="filter()"> Search </a><br>
+              <h4 id="count"></h4>
+            </div>
+          </div>
+        </div>
+        
+        <div id='centerpanel' class='container'> Center Panel </div>
+        
+        <div class='panel'> Right Panel </div>
+      
+      </div>
+
+      <div id='foot'>
+        <h3> Footer </h3>
+      </div>
+
+    </div>
+    
+  </body>
+</html>
